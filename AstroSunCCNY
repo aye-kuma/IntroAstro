@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+path = "/Users/theo/Downloads/AstroSun.csv"
+data = np.genfromtxt(path, delimiter=',', names=True)
+
+azi = data['Azi']
+el = data['El']
+
+plt.scatter(azi,el, color='orange')
+plt.xlabel('Azimuth [Deg]')
+plt.ylabel('Elevation [Deg]')
+plt.title('analemma of Sun at 3pm, CCNY')
+plt.grid()
+plt.show()
